@@ -17,7 +17,7 @@ namespace SaveCourseProvider.Functions
         private readonly IServiceProvider _serviceProvider = serviceProvider;
 
         [Function("GetSavedCourse")]
-        public async Task <IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
+        public async Task <IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
         {
             try
             {
