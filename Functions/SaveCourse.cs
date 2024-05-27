@@ -44,7 +44,7 @@ namespace SaveCourseProvider.Functions
 
                             using var context = _serviceProvider.GetRequiredService<DataContext>();
 
-                            var exists = await context.SavedCourses.FirstOrDefaultAsync(x => x.UserId == entity.UserId && x.CourseId == entity.CourseId);
+                            var exists = await context.SavedCourses.AsNoTracking().FirstOrDefaultAsync(x => x.UserId == entity.UserId && x.CourseId == entity.CourseId);
 
                             if(exists != null)
                             {
