@@ -4,6 +4,6 @@ namespace SaveCourseProvider.Data.Entity;
 
 public class SavedCoursesEntity
 {
-    public int UserId { get; set; }
+    public string UserId { get; set; } = null!;
     public string CourseId { get; set; } = null!;
 }

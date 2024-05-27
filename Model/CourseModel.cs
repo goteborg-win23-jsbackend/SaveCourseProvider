@@ -4,7 +4,7 @@ namespace SaveCourseProvider.Model;
 
 public class CourseModel
 {
-    public int UserId { get; set; }
+    public string UserId { get; set; } = null!;
     public string CourseId { get; set; } = null!;
 
     public string Name { get; set; } = null!;
