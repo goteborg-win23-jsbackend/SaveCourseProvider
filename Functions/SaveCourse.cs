@@ -51,7 +51,7 @@ namespace SaveCourseProvider.Functions
                                 context.SavedCourses.Remove(entity);
                                 await context.SaveChangesAsync();
 
-                                return new OkResult();
+                                return new OkObjectResult("removed");
                             }
 
 
